@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayla Misra - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2.5rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header, section {
+            margin-bottom: 3rem;
+        }
+
+        .header-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .contact-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .statement {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-color);
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-title">
+            <h1>Nayla Misra</h1>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/nayla-misra-229860385/" target="_blank">LinkedIn</a>
+                <a href="mailto:nm1434@scarletmail.rutgers.edu">Contact</a>
+            </div>
+        </div>
+        <!-- 1. PERSONAL STATEMENT (Exactly 1 Sentence) -->
+        <div class="statement">
+            <p>I am a driven Marketing student at Rutgers Business School specializing in brand strategy, creative design management, and operational logistics for dynamic organizations.</p>
+        </div>
+    </header>
+
+    <!-- 2. SKILLS SHOWCASE -->
+    <section>
+        <h2>Skills & Certifications</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Brand Identity & Design</div>
+            <div class="skill-card">Graphic Design (CalArts)</div>
+            <div class="skill-card">Logistics & Operations</div>
+            <div class="skill-card">Microsoft Office Suite</div>
+            <div class="skill-card">Event Coordination</div>
+            <div class="skill-card">Financial Literacy (NPOCA)</div>
+        </div>
+    </section>
+
+    <!-- 3. PROJECTS SECTION -->
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div>
+                    <h3>THRIVE Startup Logistics</h3>
+                    <p>Facilitated cross-functional collaboration and leveraged AI to optimize product logistics and team operational workflows, achieving a 12% conversion rate.</p>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank">View Project Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3>Being More Consulting Branding</h3>
+                    <p>Designed logos, typography, and color palettes aligning with firm identity, increasing customer retention by 15% through cohesive visual design.</p>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3>CAS Summit "Expressions" Competition</h3>
+                    <p>Co-founded and led logistics for a national creativity competition involving 20+ schools, creating guidelines and managing technical multi-day operations.</p>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank">View Event Details</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3>Waste To Warmth Sustainability</h3>
+                    <p>Managed the end-to-end production lifecycle for 50 sustainable product units, ensuring strict material standards and timeline delivery.</p>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nayla Misra | Rutgers Business School</p>
+    </footer>
+
+</body>
+</html>
