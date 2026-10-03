@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayla Misra | Rutgers Marketing & Strategy Portfolio</title>
+    <title>Nayla Misra | Marketing Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
+
         :root {
-            --bg-color: #ffffff;
-            --section-bg: #fcfcfc;
-            --text-color: #1a1a1a;
-            --accent-color: #6a1b9a; /* Deep Purple */
-            --hover-accent: #4a148c;
-            --text-secondary: #5f6368;
-            --border-light: #e0e0e0;
+            --bg-mahogany: #3D1208;
+            --card-mahogany: #4A170C;
+            --nude-bg: #EFE4D6;
+            --nude-text: #2B0C05;
+            --text-light: #F9F6F0;
+            --text-muted: #D1C2B5;
+            --border-color: rgba(239, 228, 214, 0.2);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 0 1rem;
-            max-width: 1100px;
+            background-color: var(--bg-mahogany);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -36,389 +38,383 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
             margin-bottom: 3rem;
         }
 
         .rbs-logo {
-            max-height: 60px;
+            max-height: 50px;
             width: auto;
+            background: #ffffff;
+            padding: 6px 12px;
+            border-radius: 4px;
         }
 
-        .contact-links a {
-            color: var(--text-secondary);
+        .nav-links a {
+            color: var(--text-light);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.9rem;
             margin-left: 1.5rem;
-            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s;
         }
 
-        .contact-links a:hover {
-            color: var(--accent-color);
+        .nav-links a:hover {
+            color: var(--nude-bg);
         }
 
-        /* HERO SECTION */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+        /* HERO SECTION - EDITORIAL GRID */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
             margin-bottom: 4rem;
         }
 
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--accent-color);
+        .hero-banner {
+            background-color: var(--card-mahogany);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-banner h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--text-light);
             margin-bottom: 1.5rem;
-            box-shadow: 0 8px 16px rgba(106, 27, 154, 0.15);
+            letter-spacing: -1px;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .category-tag {
-            background-color: rgba(106, 27, 154, 0.08);
-            color: var(--accent-color);
-            padding: 0.35rem 1rem;
-            border-radius: 20px;
+        .tagline {
             font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
         }
 
-        /* 1. PERSONAL STATEMENT (Exactly 1 Sentence) */
         .statement {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 750px;
+            font-size: 1.15rem;
+            color: var(--text-muted);
             margin-bottom: 2rem;
             font-weight: 400;
         }
 
-        /* 2. PRINT RESUME BUTTON */
-        .resume-btn {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            padding: 0.85rem 1.75rem;
-            border-radius: 50px;
+        .action-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--nude-bg);
+            color: var(--nude-text);
+            padding: 0.9rem 1.8rem;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 12px rgba(106, 27, 154, 0.25);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
         }
 
-        .resume-btn:hover {
-            background-color: var(--hover-accent);
-            transform: translateY(-2px);
+        .btn-primary:hover {
+            opacity: 0.9;
         }
 
-        .resume-btn i {
-            margin-right: 0.6rem;
-        }
-
-        /* SECTIONS */
-        section {
-            margin-bottom: 4.5rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
-            text-align: center;
+        .hero-image-container {
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            min-height: 380px;
         }
 
-        h2::after {
-            content: '';
+        .headshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent-color);
-            border-radius: 2px;
-            margin: 0.5rem auto 0;
         }
 
-        /* 2. SKILLS SHOWCASE */
-        .skills-grid {
+        /* SECTION TITLES */
+        .section-header {
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--nude-bg);
+            display: inline-block;
+        }
+
+        /* SKILLS & CERTS PANEL (NUDE ACCENT STYLE) */
+        .skills-panel {
+            background-color: var(--nude-bg);
+            color: var(--nude-text);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 4rem;
+        }
+
+        .skills-panel h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--nude-text);
+        }
+
+        .skills-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
 
-        .skill-card {
-            background: var(--section-bg);
-            border: 1px solid var(--border-light);
-            padding: 1.25rem 1rem;
-            text-align: center;
-            border-radius: 12px;
+        .skill-item {
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(43, 12, 5, 0.2);
+        }
+
+        .certs-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .certs-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .cert-badge {
+            background: rgba(43, 12, 5, 0.08);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: var(--text-color);
-            transition: border-color 0.3s, transform 0.2s;
         }
 
-        .skill-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        /* 3. PROJECTS SECTION */
-        .projects-grid {
+        /* PROJECTS & EXPERIENCE CARDS */
+        .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
         }
 
-        .project-card {
-            background: var(--section-bg);
-            border: 1px solid var(--border-light);
-            padding: 1.75rem;
-            border-radius: 12px;
+        .card {
+            background-color: var(--card-mahogany);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
-        .project-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .project-card h3 {
-            font-size: 1.25rem;
-            color: var(--accent-color);
+        .card-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            color: var(--nude-bg);
             margin-bottom: 0.5rem;
+            font-weight: 800;
         }
 
-        .project-card p {
-            color: var(--text-secondary);
+        .card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
-        }
-
-        .project-links a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .project-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* EXPERIENCE SECTION */
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .exp-card {
-            background: var(--section-bg);
-            border: 1px solid var(--border-light);
-            border-left: 4px solid var(--accent-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 0.25rem;
-        }
-
-        .exp-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--accent-color);
-        }
-
-        .exp-date {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        .exp-role {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-color);
-            margin-bottom: 0.75rem;
-        }
-
-        .exp-desc {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
         }
 
         /* FOOTER */
         footer {
             text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border-light);
-            margin-top: 3rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        @media screen and (max-width: 768px) {
+        @media (max-width: 850px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-image-container {
+                height: 350px;
+            }
             header {
                 flex-direction: column;
                 gap: 1rem;
             }
-            .contact-links a {
-                margin: 0 0.5rem;
-            }
-            .exp-header {
-                flex-direction: column;
+            .nav-links a {
+                margin: 0 0.75rem;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- HEADER WITH RUTGERS BUSINESS SCHOOL LOGO -->
+    <!-- HEADER WITH RUTGERS LOGO & NAV -->
     <header>
         <img src="rbs-logo.png" alt="Rutgers Business School" class="rbs-logo">
-        <div class="contact-links">
-            <a href="https://www.linkedin.com/in/nayla-misra-229860385/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="mailto:nm1434@scarletmail.rutgers.edu"><i class="fas fa-envelope"></i> Contact</a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        </div>
+        <nav class="nav-links">
+            <a href="https://www.linkedin.com/in/nayla-misra-229860385/" target="_blank">LinkedIn</a>
+            <a href="mailto:nm1434@scarletmail.rutgers.edu">Email</a>
+            <a href="resume.pdf.pdf" target="_blank">Resume</a>
+        </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <img src="headshot.png" alt="Nayla Misra Professional Headshot" class="profile-img">
-        
-        <h1>Nayla Misra</h1>
-        <div class="category-tag">Marketing Student @ Rutgers Business School</div>
-
-        <!-- 1. PERSONAL STATEMENT (Exactly one sentence) -->
-        <div class="statement">
-            <p>I am a driven Marketing student at Rutgers Business School specializing in brand strategy, creative campaign management, and operational logistics for dynamic organizations.</p>
+    <!-- HERO / HOME PAGE SECTION -->
+    <div class="hero-grid">
+        <div class="hero-banner">
+            <div>
+                <div class="tagline">Marketing Portfolio</div>
+                <h1>Nayla<br>Misra</h1>
+                <!-- 1. PERSONAL STATEMENT (Exactly one sentence) -->
+                <p class="statement">Driven Marketing student at Rutgers Business School specializing in brand strategy, creative coordination, and operational logistics for dynamic organizations.</p>
+            </div>
+            <div class="action-btns">
+                <!-- 2. PRINT / VIEW RESUME BUTTON (Uses exact filename from your GitHub repo) -->
+                <a href="resume.pdf.pdf" target="_blank" class="btn-primary">View & Print Resume</a>
+            </div>
         </div>
 
-        <!-- 2. VIEW & PRINT RESUME BUTTON -->
-        <a href="resume.pdf" class="resume-btn" target="_blank">
-            <i class="fas fa-file-pdf"></i> View & Print Resume
-        </a>
+        <!-- HEADSHOT IMAGE (Uses exact filename headshot.png.png from your GitHub repo) -->
+        <div class="hero-image-container">
+            <img src="headshot.png.png" alt="Nayla Misra Professional Headshot" class="headshot">
+        </div>
     </div>
 
     <!-- 2. SKILLS SHOWCASE -->
-    <section>
-        <h2>Skills & Certifications</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Brand Identity & Strategy</div>
-            <div class="skill-card">Graphic Design (CalArts)</div>
-            <div class="skill-card">Logistics & Operations</div>
-            <div class="skill-card">Microsoft Office Suite</div>
-            <div class="skill-card">Event Coordination</div>
-            <div class="skill-card">Financial Literacy (NPOCA)</div>
+    <div class="skills-panel">
+        <h2>Skills & Qualifications</h2>
+        <div class="skills-list">
+            <div class="skill-item">Microsoft Office (Access, Excel, PowerPoint, Word)</div>
+            <div class="skill-item">Brand Identity & Design</div>
+            <div class="skill-item">Logistics & Operational Workflow</div>
+            <div class="skill-item">Event & Box Office Coordination</div>
+            <div class="skill-item">Production & Stage Management</div>
         </div>
-    </section>
 
-    <!-- 3. PROJECTS SECTION -->
-    <section id="projects">
-        <h2>Featured Special Projects</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div>
-                    <h3>THRIVE Startup Logistics & Growth</h3>
-                    <p>Facilitated cross-functional collaboration and leveraged AI tools to optimize product logistics and team operational workflow, achieving a 12% conversion rate and over 30 unique visitors in one month.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Project Repo <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <h3>Being More Consulting Brand Strategy</h3>
-                    <p>Designed logos, custom typography, and cohesive color palettes aligning with the firm's brand identity, resulting in a 15% increase in customer retention.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Case Study <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <h3>CAS Summit "Expressions" Competition</h3>
-                    <p>Co-founded and coordinated logistics for a national creativity competition involving 20+ participating schools, developing official guidelines and managing technical operations.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Event Details <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <h3>Waste To Warmth Sustainable Lifecycle</h3>
-                    <p>Managed the end-to-end production lifecycle for 50 sustainable product units, ensuring material quality standards and strict operational timelines were met.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Details <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
+        <div class="certs-title">Certifications</div>
+        <div class="certs-tags">
+            <span class="cert-badge">Financial Literacy Program (NPOCA)</span>
+            <span class="cert-badge">Global Citizen Program (UNESCO)</span>
+            <span class="cert-badge">Fundamentals of Graphic Design (CALARTS)</span>
+            <span class="cert-badge">Effective Listening (LinkedIn Learning)</span>
         </div>
-    </section>
+    </div>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience">
-        <h2>Leadership & Experience</h2>
-        <div class="experience-list">
-
-            <div class="exp-card">
-                <div class="exp-header">
-                    <span class="exp-title">Livingston Theatre Company</span>
-                    <span class="exp-date">August 2026 - Present</span>
-                </div>
-                <div class="exp-role">Creative Coordinator & Box Office Assistant</div>
-                <p class="exp-desc">Manage box office setup, ticket sales, concession operations, inventory tracking, and logistical purchasing trips for live performance creative assets.</p>
+    <!-- 3. PROJECTS SECTION (Strictly from resume) -->
+    <h2 class="section-header">Special Projects</h2>
+    <div class="grid-layout">
+        
+        <div class="card">
+            <div>
+                <div class="card-num">(01)</div>
+                <h3>THRIVE Startup</h3>
+                <div class="card-subtitle">Logistics & Coordination | Jan 2026 - Apr 2026</div>
+                <p>Facilitated cross-functional collaboration, achieving a 12% conversion rate and 30+ unique visitors in one month. Utilized AI tools to optimize product logistics and team operational workflow.</p>
             </div>
-
-            <div class="exp-card">
-                <div class="exp-header">
-                    <span class="exp-title">Theatrical Production Lead & Playwright</span>
-                    <span class="exp-date">High School Leadership</span>
-                </div>
-                <div class="exp-role">Production & Stage Management</div>
-                <p class="exp-desc">Directed and acted in large-scale productions, oversaw execution of scripts, set design, costume design, and managed rehearsal timelines under strict performance deadlines.</p>
-            </div>
-
         </div>
-    </section>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(02)</div>
+                <h3>CAS Summit</h3>
+                <div class="card-subtitle">Founding Member & Co-Chair | Feb 2024 - Mar 2024</div>
+                <p>Organized and coordinated logistics for the national-level 'Expressions' Competition with over 20 participating schools. Developed competition guidelines and coordinated technical requirements for multi-day operations.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(03)</div>
+                <h3>Being More Consulting</h3>
+                <div class="card-subtitle">Branding Designer | Aug 2024</div>
+                <p>Designed logos, custom fonts, and color palettes aligning with the firm's brand identity, driving a 15% increase in customer retention.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RELEVANT COURSEWORK & EXPERIENCE -->
+    <h2 class="section-header">Leadership & Experience</h2>
+    <div class="grid-layout">
+        
+        <div class="card">
+            <div>
+                <div class="card-num">(01)</div>
+                <h3>Livingston Theatre Company</h3>
+                <div class="card-subtitle">Creative Coordinator & Box Office Assistant | Aug 2026 - Present</div>
+                <p>Manage box office setup, ticket sales, concession operations, and house management. Maintain physical inventory and logs for costumes, props, and set equipment while leading purchasing trips.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(02)</div>
+                <h3>Waste To Warmth</h3>
+                <div class="card-subtitle">Creative Design Director | Dec 2023</div>
+                <p>Managed the production lifecycle for 50 sustainable product units, ensuring material standards and production timelines were met.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(03)</div>
+                <h3>Production & Stage Management</h3>
+                <div class="card-subtitle">Theatrical Production Lead & Playwright</div>
+                <p>Directed and acted in large-scale plays, overseeing execution of scripts, set design, and costume design. Managed rehearsals and timelines under strict performance deadlines.</p>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
-        <p>&copy; 2026 Nayla Misra | Marketing & Brand Strategy Portfolio</p>
-        <p>Rutgers Business School</p>
+        <p>&copy; 2026 Nayla Misra | Rutgers Business School (Bachelor of Science, Marketing)</p>
     </footer>
 
 </body>
