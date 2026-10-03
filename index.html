@@ -3,181 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Nayla Misra | Marketing Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
+
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --accent-color: #38bdf8;
-            --text-secondary: #94a3b8;
+            --bg-mahogany: #3D1208;
+            --card-mahogany: #4A170C;
+            --nude-bg: #EFE4D6;
+            --nude-text: #2B0C05;
+            --text-light: #F9F6F0;
+            --text-muted: #D1C2B5;
+            --border-color: rgba(239, 228, 214, 0.2);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: var(--bg-mahogany);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
             padding: 2rem 1rem;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        header, section {
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
             margin-bottom: 3rem;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
+        .rbs-logo {
+            max-height: 50px;
+            width: auto;
+            background: #ffffff;
+            padding: 6px 12px;
+            border-radius: 4px;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .statement {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--text-color);
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-        }
-
-        .skill-card {
-            background: var(--card-bg);
-            padding: 1rem;
-            text-align: center;
-            border-radius: 8px;
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
 
-        .projects-grid {
+        .nav-links a:hover {
+            color: var(--nude-bg);
+        }
+
+        /* HERO SECTION - EDITORIAL GRID */
+        .hero-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
-        .project-card {
-            background: var(--card-bg);
-            padding: 1.5rem;
+        .hero-banner {
+            background-color: var(--card-mahogany);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2.5rem;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
-        .project-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
+        .hero-banner h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
         }
 
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        .tagline {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
             margin-bottom: 1rem;
         }
 
-        .project-links a {
-            color: var(--accent-color);
+        .statement {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--nude-bg);
+            color: var(--nude-text);
+            padding: 0.9rem 1.8rem;
+            border-radius: 4px;
             text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .hero-image-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            min-height: 380px;
+        }
+
+        .headshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* SECTION TITLES */
+        .section-header {
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--nude-bg);
+            display: inline-block;
+        }
+
+        /* SKILLS & CERTS PANEL (NUDE ACCENT STYLE) */
+        .skills-panel {
+            background-color: var(--nude-bg);
+            color: var(--nude-text);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 4rem;
+        }
+
+        .skills-panel h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--nude-text);
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-item {
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(43, 12, 5, 0.2);
+        }
+
+        .certs-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .certs-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .cert-badge {
+            background: rgba(43, 12, 5, 0.08);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-right: 1rem;
         }
 
-        .project-links a:hover {
-            text-decoration: underline;
+        /* PROJECTS & EXPERIENCE CARDS */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
         }
 
+        .card {
+            background-color: var(--card-mahogany);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            color: var(--nude-bg);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FOOTER */
         footer {
             text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            margin-top: 2rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 850px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-image-container {
+                height: 350px;
+            }
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links a {
+                margin: 0 0.75rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER WITH RUTGERS LOGO & NAV -->
     <header>
-        <h1>Alex Morgan</h1>
-        <!-- 1. PERSONAL STATEMENT (Exactly one sentence) -->
-        <div class="statement">
-            <p>I am an aspiring software developer passionate about building intuitive web applications and leveraging technology to solve real-world problems.</p>
-        </div>
+        <img src="rbs-logo.png" alt="Rutgers Business School" class="rbs-logo">
+        <nav class="nav-links">
+            <a href="https://www.linkedin.com/in/nayla-misra-229860385/" target="_blank">LinkedIn</a>
+            <a href="mailto:nm1434@scarletmail.rutgers.edu">Email</a>
+            <a href="resume.pdf.pdf" target="_blank">Resume</a>
+        </nav>
     </header>
 
+    <!-- HERO / HOME PAGE SECTION -->
+    <div class="hero-grid">
+        <div class="hero-banner">
+            <div>
+                <div class="tagline">Marketing Portfolio</div>
+                <h1>Nayla<br>Misra</h1>
+                <!-- 1. PERSONAL STATEMENT (Exactly one sentence) -->
+                <p class="statement">Driven Marketing student at Rutgers Business School specializing in brand strategy, creative coordination, and operational logistics for dynamic organizations.</p>
+            </div>
+            <div class="action-btns">
+                <!-- 2. PRINT / VIEW RESUME BUTTON (Uses exact filename from your GitHub repo) -->
+                <a href="resume.pdf.pdf" target="_blank" class="btn-primary">View & Print Resume</a>
+            </div>
+        </div>
+
+        <!-- HEADSHOT IMAGE (Uses exact filename headshot.png.png from your GitHub repo) -->
+        <div class="hero-image-container">
+            <img src="headshot.png.png" alt="Nayla Misra Professional Headshot" class="headshot">
+        </div>
+    </div>
+
     <!-- 2. SKILLS SHOWCASE -->
-    <section>
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML / CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Git & GitHub</div>
-            <div class="skill-card">UI/UX Design</div>
-            <div class="skill-card">Problem Solving</div>
+    <div class="skills-panel">
+        <h2>Skills & Qualifications</h2>
+        <div class="skills-list">
+            <div class="skill-item">Microsoft Office (Access, Excel, PowerPoint, Word)</div>
+            <div class="skill-item">Brand Identity & Design</div>
+            <div class="skill-item">Logistics & Operational Workflow</div>
+            <div class="skill-item">Event & Box Office Coordination</div>
+            <div class="skill-item">Production & Stage Management</div>
         </div>
-    </section>
 
-    <!-- 3. PROJECTS SECTION (3 projects with links) -->
-    <section>
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div>
-                    <h3>Personal Portfolio Site</h3>
-                    <p>A responsive digital portfolio built with HTML and CSS showcasing my background, skills, and featured projects.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Code</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <h3>Task Management App</h3>
-                    <p>A web application that helps users organize daily tasks, set priorities, and track productivity metrics.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Code</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <h3>Data Analysis Dashboard</h3>
-                    <p>A data visualization tool built using Python that analyzes and displays key trends from sample datasets.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Code</a>
-                </div>
-            </div>
-
+        <div class="certs-title">Certifications</div>
+        <div class="certs-tags">
+            <span class="cert-badge">Financial Literacy Program (NPOCA)</span>
+            <span class="cert-badge">Global Citizen Program (UNESCO)</span>
+            <span class="cert-badge">Fundamentals of Graphic Design (CALARTS)</span>
+            <span class="cert-badge">Effective Listening (LinkedIn Learning)</span>
         </div>
-    </section>
+    </div>
+
+    <!-- 3. PROJECTS SECTION (Strictly from resume) -->
+    <h2 class="section-header">Special Projects</h2>
+    <div class="grid-layout">
+        
+        <div class="card">
+            <div>
+                <div class="card-num">(01)</div>
+                <h3>THRIVE Startup</h3>
+                <div class="card-subtitle">Logistics & Coordination | Jan 2026 - Apr 2026</div>
+                <p>Facilitated cross-functional collaboration, achieving a 12% conversion rate and 30+ unique visitors in one month. Utilized AI tools to optimize product logistics and team operational workflow.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(02)</div>
+                <h3>CAS Summit</h3>
+                <div class="card-subtitle">Founding Member & Co-Chair | Feb 2024 - Mar 2024</div>
+                <p>Organized and coordinated logistics for the national-level 'Expressions' Competition with over 20 participating schools. Developed competition guidelines and coordinated technical requirements for multi-day operations.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(03)</div>
+                <h3>Being More Consulting</h3>
+                <div class="card-subtitle">Branding Designer | Aug 2024</div>
+                <p>Designed logos, custom fonts, and color palettes aligning with the firm's brand identity, driving a 15% increase in customer retention.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RELEVANT COURSEWORK & EXPERIENCE -->
+    <h2 class="section-header">Leadership & Experience</h2>
+    <div class="grid-layout">
+        
+        <div class="card">
+            <div>
+                <div class="card-num">(01)</div>
+                <h3>Livingston Theatre Company</h3>
+                <div class="card-subtitle">Creative Coordinator & Box Office Assistant | Aug 2026 - Present</div>
+                <p>Manage box office setup, ticket sales, concession operations, and house management. Maintain physical inventory and logs for costumes, props, and set equipment while leading purchasing trips.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(02)</div>
+                <h3>Waste To Warmth</h3>
+                <div class="card-subtitle">Creative Design Director | Dec 2023</div>
+                <p>Managed the production lifecycle for 50 sustainable product units, ensuring material standards and production timelines were met.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-num">(03)</div>
+                <h3>Production & Stage Management</h3>
+                <div class="card-subtitle">Theatrical Production Lead & Playwright</div>
+                <p>Directed and acted in large-scale plays, overseeing execution of scripts, set design, and costume design. Managed rehearsals and timelines under strict performance deadlines.</p>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
-        <p>&copy; 2026 Alex Morgan. Built for Personal Portfolio Assignment.</p>
+        <p>&copy; 2026 Nayla Misra | Rutgers Business School (Bachelor of Science, Marketing)</p>
     </footer>
 
 </body>
